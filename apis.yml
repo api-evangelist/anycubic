@@ -1,23 +1,73 @@
 aid: anycubic
+
 name: Anycubic
+
+image: https://www.anycubic.com/k3c2.jpg
+
 description: 'Anycubic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
   and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anycubic/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation found; attempts to fetch OpenAPI at api.anycubic.com returned no content.
+  evidence:
+    - url: https://api.anycubic.com/openapi.json
+      status: 000
+  checked: 2026-09-25
+
 tags:
-- Company
-apis: []
+- 3D Printing
+- FDM Printers
+- LCD Printers
+- Resin Materials
+- Filament Materials
+- 3D Printing Accessories
+- 3D Printing Software
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/anycubic-llms.txt
+- type: WellKnown
+  url: well-known/anycubic-well-known.yml
+- type: Hosts
+  url: hosts/anycubic-hosts.yml
+- type: Vendors
+  url: vendors/anycubic-vendors.yml
+- type: TermsOfService
+  url: https://store.anycubic.com/policies/terms-of-service
+- type: Newsroom
+  url: https://store.anycubic.com/blogs/news
+- type: DomainSecurity
+  url: security/anycubic-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/anycubic
+  url: https://www.anycubic.com
+
+apis: []
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
